@@ -1,6 +1,6 @@
 # joblancer app
 
-A job listings web application using Laravel and MySQL (MariaDB)
+A job listings web application using PHP, Laravel web framework, and MySQL (MariaDB)
 
 ![image coming soon](/public/images/png "joblancer")
 
