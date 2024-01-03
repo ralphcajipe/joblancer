@@ -24,12 +24,14 @@
 
                             <!-- Delete -->
                             <td class="px-4 py-8 border-t border-b border-gray-300 text-lg">
-                                <form method="POST" action="/listings/{{ $listing->id }}">
+                                <form method="POST" id="deleteForm{{ $listing->id }}"
+                                    action="/listings/{{ $listing->id }}">
                                     @csrf
                                     @method('DELETE')
-                                    <button class="text-red-500"
-                                        onclick="return confirm('Are you sure you want to delete {{ $listing->title }}?')">
-                                        <i class="fa-solid fa-trash"></i> Delete</button>
+                                    <button type="button" class="text-red-500"
+                                        onclick="confirmDelete({{ $listing->id }}, '{{ $listing->title }}')">
+                                        <i class="fa-solid fa-trash"></i> Delete
+                                    </button>
                                 </form>
                             </td>
                         </tr>
@@ -43,5 +45,23 @@
                 @endunless
             </tbody>
         </table>
+        <!-- Delete button's JavaScript using SweetAlert2 -->
+        <script>
+            function confirmDelete(id, title) {
+                Swal.fire({
+                    title: 'Are you sure?',
+                    html: "<b>Delete</b> " + title + "?",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes, delete it!'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        document.getElementById('deleteForm' + id).submit();
+                    }
+                })
+            }
+        </script>
     </x-card>
 </x-layout>

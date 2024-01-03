@@ -43,7 +43,8 @@ class ListingController extends Controller
             'website' => 'required',
             'email' => ['required', 'email'],
             'tags' => 'required',
-            'description' => 'required'
+            'description' => 'required',
+            'logo' => 'image|mimes:jpeg,png,jpg|max:4096'
         ]);
 
         if ($request->hasFile('logo')) {
@@ -80,7 +81,8 @@ class ListingController extends Controller
             'website' => 'required',
             'email' => ['required', 'email'],
             'tags' => 'required',
-            'description' => 'required'
+            'description' => 'required',
+            'logo' => 'image|mimes:jpeg,png,jpg|max:4096'
         ]);
 
         if ($request->hasFile('logo')) {
