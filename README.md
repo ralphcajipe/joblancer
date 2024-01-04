@@ -9,7 +9,7 @@ A web app that can Create, Read, Update, and Delete (CRUD) job listings.
 ![TailwindCSS](https://img.shields.io/badge/-TailwindCSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)
 ![AlpineJS](https://img.shields.io/badge/-AlpineJS-8DB500?style=flat-square&logo=alpine.js&logoColor=white)
 
-![image coming soon](/public/images/student-system.jpg)
+![joblancer](/public/images/joblancer.jpg)
 
 ## Usage
 

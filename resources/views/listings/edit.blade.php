@@ -94,10 +94,19 @@
                 <img class="w-48 mr-6 mb-6"
                     src="{{ $listing->logo ? asset('storage/' . $listing->logo) : asset('images/no-image.png') }}"
                     alt="" />
-
+                <!-- Logo's Error Handling -->
                 @error('logo')
-                    <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                    <p id="logoError" class="text-red-500 text-sm mt-1">{{ $message }}</p>
                 @enderror
+
+                <script>
+                window.onload = function() {
+                    var logoError = document.getElementById('logoError');
+                    if (logoError) {
+                        logoError.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+                </script>
             </div>
 
             <!-- Description -->

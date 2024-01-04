@@ -89,10 +89,19 @@
                     Company Logo
                 </label>
                 <input type="file" class="border border-gray-200 rounded p-2 w-full" name="logo" />
-
+                <!-- Logo's Error Handling -->
                 @error('logo')
-                    <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                    <p id="logoError" class="text-red-500 text-sm mt-1">{{ $message }}</p>
                 @enderror
+
+                <script>
+                window.onload = function() {
+                    var logoError = document.getElementById('logoError');
+                    if (logoError) {
+                        logoError.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+                </script>
             </div>
 
             <!-- Description -->
