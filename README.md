@@ -11,6 +11,10 @@ A job listing web app that can Create, Read, Update, and Delete (CRUD) job infor
 
 ![joblancer](/public/images/joblancer.jpg)
 
+| Create                               | Read                             | Update and Delete                                      |
+| ------------------------------------ | -------------------------------- | ------------------------------------------------------ |
+| ![Create](/public/images/create.jpg) | ![Read](/public/images/read.jpg) | ![Update and Delete](/public/images/update-delete.jpg) |
+
 ## Usage
 
 ### Database Setup
